@@ -156,17 +156,23 @@ profile:
   store-fake-ip: true
 rule-providers:
   iklan:
-    type: file
+    type: http
     behavior: classical
     path: "./rule_provider/iklan.yaml"
+    url: https://raw.githubusercontent.com/juni91/open_clash/main/single_modem/rule_provider/iklan.yaml
+    interval: 86400
   umum:
-    type: file
+    type: http
     behavior: classical
     path: "./rule_provider/umum.yaml"
+    url: https://raw.githubusercontent.com/juni91/open_clash/main/single_modem/rule_provider/umum.yaml
+    interval: 86400
   game:
-    type: file
+    type: http
     behavior: classical
     path: "./rule_provider/gaming.yaml"
+    url: https://raw.githubusercontent.com/juni91/open_clash/main/single_modem/rule_provider/gaming.yaml
+    interval: 86400
 rules:
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - RULE-SET,iklan,REJECT
