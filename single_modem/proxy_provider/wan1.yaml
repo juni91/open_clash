@@ -1,14 +1,14 @@
 proxies:
-- name: sanggoro
+- name: sanggoro-ws
   type: trojan
   server: 172.67.73.39
   port: 443
-  password: 23d0f200-9635-11ec-8196-1577c1651679
+  password: uuid-mu
   udp: true
   sni: id-sanggoro.bypass.id
   skip-cert-verify: false
   network: ws
   ws-opts:
     path: "/howdy"
-  interface-name: wwan0
-  routing-mark: 2333
+  #interface-name: wwan0
+  #routing-mark: 1333
